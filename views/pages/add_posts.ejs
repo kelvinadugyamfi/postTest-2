@@ -1,0 +1,39 @@
+   <!-- header -->
+   <%- include('../partials/header',{title:'Add Post',
+                        description:'A Blog Theme by Start Bootstrap',
+                        img:'post-bg.jpg'}) %>
+
+
+<div class="container position-relative px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+            <div class="post-heading">
+<form method="post" action="/post">
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Title</label>
+      <input type="text" name="title" class="form-control" id="exampleFormControlInput1" placeholder="type blog title here">
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Description</label>
+      <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Posted By</label>
+        <input type="text" name="author" class="form-control" id="exampleFormControlInput1" placeholder="type author name here">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Image</label>
+        <input type="file" name="image" class="form-control" id="exampleFormControlInput1" placeholder="type blog title here">
+      </div>
+      <div class="col-auto">
+        <button type="submit" class="btn btn-dark mb-2 mt-3">Save</button>
+      </div>
+  </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- page header title -->
+<%- contentFor('title') %>
+Add Post
